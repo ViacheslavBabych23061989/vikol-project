@@ -1,0 +1,1403 @@
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/open-sans-regylar-400/OpenSans-Regular.eot');
+    src: url('../fonts/open-sans-regylar-400/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans-regylar-400/OpenSans-Regular.svg#OpenSans-Regular') format('svg'),
+         url('../fonts/open-sans-regylar-400/OpenSans-Regular.ttf') format('truetype'),
+         url('../fonts/open-sans-regylar-400/OpenSans-Regular.woff') format('woff'),
+         url('../fonts/open-sans-regylar-400/OpenSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url('../fonts/open-sans-semy-bold-600/OpenSans-SemiBold.eot');
+    src: url('../fonts/open-sans-semy-bold-600/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans-semy-bold-600/OpenSans-SemiBold.svg#OpenSans-SemiBold') format('svg'),
+         url('../fonts/open-sans-semy-bold-600/OpenSans-SemiBold.ttf') format('truetype'),
+         url('../fonts/open-sans-semy-bold-600/OpenSans-SemiBold.woff') format('woff'),
+         url('../fonts/open-sans-semy-bold-600/OpenSans-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Museo Sans Cyrl 500';
+    src: url('../fonts/Museo-Sans-Cyrl-500/MuseoSansCyrl-500.eot');
+    src: url('../fonts/Museo-Sans-Cyrl-500/MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Museo-Sans-Cyrl-500/MuseoSansCyrl-500.woff2') format('woff2'),
+        url('../fonts/Museo-Sans-Cyrl-500/MuseoSansCyrl-500.woff') format('woff'),
+        url('../fonts/Museo-Sans-Cyrl-500/MuseoSansCyrl-500.ttf') format('truetype'),
+        url('../fonts/Museo-Sans-Cyrl-500/MuseoSansCyrl-500.svg#MuseoSansCyrl-500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+	margin: 0;
+	padding: 0;  
+}
+html {
+    scroll-behavior: smooth; 
+}
+li {
+	list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.top-menu {
+    display: flex; 
+    font-family: 'OpenSans-Regular';
+    font-size: 16px;
+    line-height: 19px;  
+    justify-content: center;
+    align-items: center;
+    height: 78px;
+    &__logo {
+        width: 125px;      
+        margin-right: 10px;
+    }
+    &__list {
+        display: flex;
+    }
+    &__list li a {
+        color: black;
+        padding: 25px 40px;       
+    }
+    &__list li a:hover {
+        color: #f1e860;       
+    }
+}
+.header {
+    position: relative;  
+    display: flex;
+    justify-content: center;
+    height: 580px;
+    width: 100%;
+    background-image: url(../img/contacts-u762-fr.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.header-opasity {
+    height: 580px;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.32;
+}
+.header-block {
+    position: absolute;
+    &__name {
+        font-family: 'Museo Sans Cyrl 500';
+        font-size: 60px;
+        line-height: 72px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 150px;
+        margin-bottom: 42px;
+    }
+    &__info {
+        font-family: 'Museo Sans Cyrl 500';
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}
+.header-block__navigate {
+    height: 140px;
+    align-items: flex-end;
+    width: 100%;
+    position: absolute;
+    top: 560px;
+    display: flex;
+    justify-content: center;
+    overflow-wrap: break-word;
+    &_left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 324px;
+        height: 81px;
+        background-color: #FFFDEC;
+        font-family: 'Museo Sans Cyrl 500';
+        font-size: 20px;
+        line-height: 20px;
+        box-shadow: -5px 4px 27px #00000075;
+        transition: 0.5s;   
+    }
+    &_left:hover {
+        background-color: black;
+    }
+    &_left a {
+        color: black;
+        padding: 31px 75px;
+    }
+    &_left a:hover {       
+        color: white;    
+    }
+    &_center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 324px;
+        height: 81px;
+        background-color: #FFED98;
+        font-family: 'Museo Sans Cyrl 500';
+        font-size: 20px;
+        line-height: 20px;
+        color: black;
+        margin-right: 8px;
+        margin-left: 8px;
+        box-shadow: 0px 4px 27px #00000075;
+        transition: 0.5s;
+    }
+    &_center:hover {
+        background: black;      
+    }
+    &_center a {
+        color: black;
+        padding: 31px 22px;
+    }
+    &_center a:hover {
+        color: white;   
+    }
+    &_right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 324px;
+        height: 81px;
+        background-color: #FFFDEC;
+        font-family: 'Museo Sans Cyrl 500';
+        font-size: 20px;
+        line-height: 20px;
+        color: black;
+        box-shadow: 5px 4px 27px #00000075;
+        transition: 0.5s;    
+    }
+    &_right:hover {
+        background: black;     
+    }
+    &_right a {
+        color: black;
+        padding: 31px 26px;
+    }
+    &_right a:hover {
+        color: white;  
+    }
+}
+.early-varieties {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    &__left-block {
+        margin-top: 60px;
+        .early-varieties__name  {
+            display: flex;
+            justify-content: center;
+            font-family: 'Museo Sans Cyrl 500';
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 10px;
+        }
+        .early-varieties__name p {
+            border-bottom: 4px solid#71D66F;
+        }
+        .early-varieties__tabble {
+            width: 750px;
+        }
+        .early-varieties__image {
+            position: relative;
+            .early-varieties__image1 {
+                position: absolute;
+                width: 100%;
+                top: 280px; 
+            }
+            .early-varieties__image2 {
+                position: absolute;
+                width: 35%;
+                top: 180px;
+                left: 455px;
+            }
+        }
+    }
+    &__right-block {
+        margin-top: 110px;
+        margin-left: 20px;
+        .early-varieties__type {
+            display: flex;
+            justify-content: flex-start;          
+            width: 484px;
+            height: 168px;
+            background-color: #f3f3f3;
+            margin-bottom: 20px;
+            .early-varieties__ultra-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/Ultra.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 12px 25px;
+            }
+            .early-varieties__apollo-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/Apollo.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 12px 25px;
+            }
+            .early-varieties__histar-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/Histar.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 12px 25px;
+            }
+            .early-varieties__ps0035nr2-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/PS0035NR2.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 12px 25px;
+            }
+            .early-varieties__s0009m2-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/S0009-M2.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 12px 25px;
+            }
+            .early-varieties__main-info {
+                .early-varieties__name {
+                    font-family: 'OpenSans-SemiBold';
+                    font-size: 21px;
+                    line-height: 25px;
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                }
+                .early-varieties__info {
+                    font-family: 'OpenSans-Regular';
+                    font-size: 14px;
+                    margin-bottom: 14px;  
+                }
+                .early-varieties__download-info {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #FFFFFF;
+                    font-family: 'OpenSans-Regular';
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    width: 172px;
+                    height: 28px;
+                    border-radius: 10px;
+                    background-color: #5DB870;
+                    text-decoration: none;
+                    box-shadow: 6px 6px 8px #c2c2c2;
+                    padding-bottom: 2px; 
+                    transition: 0.5s;                   
+                }
+                .early-varieties__download-info:hover {
+                    background-color: black;
+                }  
+            }
+        }
+    }
+}
+.middle-early-varieties {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/fon.jpg);
+    &__left-block {
+        margin-top: 110px;
+        margin-right: 20px;
+        .middle-early-varieties__type {
+            display: flex;
+            justify-content: flex-start;          
+            width: 484px;
+            height: 168px;
+            background-color: #e5e5e5;
+            margin-bottom: 20px;
+            .middle-early-varieties__monroe-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/Monroe.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 12px 25px;
+            }
+            .middle-early-varieties__sensor-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/Sensor.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 12px 25px;
+            }
+            .middle-early-varieties__hardin-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/Hardin.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                margin: 12px 25px;
+            }
+            .middle-early-varieties__s04d3-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/RR2YS04-D3.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 12px 25px;
+            }              
+            .middle-early-varieties__main-info {
+                .middle-early-varieties__name {
+                    font-family: 'OpenSans-SemiBold';
+                    font-size: 21px;
+                    line-height: 25px;
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                }
+                .middle-early-varieties__info {
+                    font-family: 'OpenSans-Regular';
+                    font-size: 14px;
+                    margin-bottom: 14px;
+                }
+                .middle-early-varieties__download-info {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #FFFFFF;
+                    font-family: 'OpenSans-Regular';
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    width: 172px;
+                    height: 28px;
+                    border-radius: 10px;
+                    background-color: #5DB870;
+                    text-decoration: none;
+                    box-shadow: 6px 6px 8px #c2c2c2;
+                    padding-bottom: 2px;
+                    transition: 0.5s;  
+                }
+                .middle-early-varieties__download-info:hover {
+                    background-color: #000000; 
+                }
+            }
+        }
+    }
+    &__right-block {
+        margin-top: 60px;
+        .middle-early-varieties__name {
+            display: flex;
+            justify-content: center;
+            font-family: 'Museo Sans Cyrl 500';
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 10px;
+        }
+        .middle-early-varieties__name p {
+            border-bottom: 4px solid#71D66F;
+        }
+        .middle-early-varieties__image {
+            position: relative;
+            .middle-early-varieties__image1 {
+                position: absolute;
+                width: 80%;
+                top: 80px;
+                left: 90px;
+            }
+            .middle-early-varieties__image2 {
+                position: absolute;
+                width: 31%;
+                top: 90px;
+                left: 520px;
+            }
+        }
+    }
+}
+.middle-late-varieties {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+    &__left-block {
+        margin-top: 60px;
+        .middle-late-varieties__name {
+            display: flex;
+            justify-content: center;
+            font-family: 'Museo Sans Cyrl 500';
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 10px;
+        }
+        .middle-late-varieties__name p {
+            border-bottom: 4px solid#71D66F;
+        }
+        .middle-late-varieties__image {
+            position: relative;
+            .middle-late-varieties__image1 {
+                position: absolute;
+                width: 75%;
+                left: 97px;
+            }
+            .middle-late-varieties__image2 {
+                position: absolute;
+                width: 31%;
+                top: 75px;
+                left: 512px;
+            }
+        }
+    }
+    &__right-block {
+        margin-top: 110px;
+        margin-left: 20px;
+        .middle-late-varieties__type {
+            display: flex;
+            justify-content: flex-start;          
+            width: 484px;
+            height: 168px;
+            background-color: #eeeeee;
+            margin-bottom: 20px;
+            .middle-late-varieties__onyx-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/Onyx.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 12px 25px;
+            }
+            .middle-late-varieties__maxus-image {
+                width: 140px;
+                height: 140px;
+                border-radius: 70px;
+                background-image: url(../img/Maxus.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 12px 25px;
+            }
+            .middle-late-varieties__main-info {
+                .middle-late-varieties__name {
+                    font-family: 'OpenSans-SemiBold';
+                    font-size: 21px;
+                    line-height: 25px;
+                    margin-top: 25px;
+                    margin-bottom: 15px;
+                }
+                .middle-late-varieties__info {
+                    font-family: 'OpenSans-Regular';
+                    font-size: 14px;
+                    margin-bottom: 14px;
+                }
+                .middle-late-varieties__download-info {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #FFFFFF;
+                    font-family: 'OpenSans-Regular';
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    width: 172px;
+                    height: 28px;
+                    border-radius: 10px;
+                    background-color: #5DB870;
+                    text-decoration: none;
+                    box-shadow: 6px 6px 8px #c2c2c2;
+                    padding-bottom: 2px;
+                    transition: 0.5s; 
+                }
+                .middle-late-varieties__download-info:hover {
+                    background-color: #000000;
+                }
+            }
+        }
+    }
+}
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 670px;
+    background-image: url(../img/jan-jakub-nanista-124670-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    &__phone-adress {
+        margin-right: 20px;
+        .contacts__phone {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 470px;
+            height: 150px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 8px -5px 40px #0000002b;
+            margin-bottom: 30px;
+            .contacts__phone-logo {
+                width: 72px;
+                height: 72px;
+                margin-left: 40px;
+                margin-right: 30px;
+            }
+            .contacts__phone-info {
+                font-family: 'OpenSans-Regular';
+                font-size: 14px;
+                line-height: 17px;
+                .contacts__phone-text {
+                    font-family: 'OpenSans-SemiBold';
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .contacts__adress {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 470px;
+            height: 150px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 6px -18px 40px #0000002b;
+            .contacts__adress-logo {
+                width: 72px;
+                height: 72px;
+                margin-left: 40px;
+                margin-right: 30px;
+            }
+            .contacts__adress-info {
+                font-family: 'OpenSans-Regular';
+                font-size: 14px;
+                line-height: 17px;
+                .contacts__adress-text {
+                    font-family: 'OpenSans-SemiBold';
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    &__map {
+        margin-left: 20px;
+        width: 580px;
+        height: 330px;
+    }
+}
+.copyright-protection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    background-color: black;
+    color: white;
+    font-family: 'OpenSans-Regular';
+    font-size: 14px;
+    line-height: 17px;
+}
+.copyright-protection p {
+    padding-bottom: 5px;
+}
+@media(max-width: 1300px) {
+    .top-menu {
+        height: 62px;
+        &__logo {
+            width: 114px;      
+        }
+        &__list li a {   
+            padding: 20px 40px;       
+        }
+    }
+    .header-block__navigate {
+        top: 543px;
+    }
+    .early-varieties {       
+        &__left-block {
+            .early-varieties__tabble {
+                width: 600px;
+            }
+            .early-varieties__image {
+                .early-varieties__image1 {
+                    top: 220px; 
+                }
+                .early-varieties__image2 {
+                    left: 390px;
+                    top: 140px;
+                }
+            }
+        }
+        &__right-block {
+            .early-varieties__type {        
+                width: 370px;
+                height: 150px;
+                margin-bottom: 15px;
+                .early-varieties__ultra-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }
+                .early-varieties__apollo-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }
+                .early-varieties__histar-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }
+                .early-varieties__ps0035nr2-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }
+                .early-varieties__s0009m2-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }
+                .early-varieties__main-info {
+                    .early-varieties__name {
+                        margin-top: 20px;
+                        margin-bottom: 7px;
+                    }
+                    .early-varieties__info {
+                        margin-bottom: 12px;  
+                    }
+                }
+            }
+        }
+    }
+    .middle-early-varieties {
+        &__left-block {
+            .middle-early-varieties__type {
+                width: 370px;
+                height: 150px;
+                margin-bottom: 15px;
+                .middle-early-varieties__monroe-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }
+                .middle-early-varieties__sensor-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }
+                .middle-early-varieties__hardin-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }
+                .middle-early-varieties__s04d3-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }              
+                .middle-early-varieties__main-info {
+                    .middle-early-varieties__name {
+                        margin-top: 20px;
+                        margin-bottom: 7px;
+                    }
+                    .middle-early-varieties__info {
+                        margin-bottom: 12px; 
+                    }
+                }
+            }
+        }
+        &__right-block {
+            .middle-early-varieties__tabble {
+                width: 600px;
+            }
+            .middle-early-varieties__image {
+                .middle-early-varieties__image1 {
+                    left: 70px;
+                }
+                .middle-early-varieties__image2 {
+                    left: 410px;
+                }
+            }
+        }
+    }
+    .middle-late-varieties {
+        height: 600px;
+        &__left-block {
+            .middle-late-varieties__tabble {
+                width: 600px;
+            }
+            .middle-late-varieties__image {
+                .middle-late-varieties__image2 {
+                    left: 400px;
+                    top: 65px;
+                }
+            }
+        }
+        &__right-block {
+            .middle-late-varieties__type {
+                width: 370px;
+                height: 150px;
+                margin-bottom: 15px;
+                .middle-late-varieties__onyx-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }
+                .middle-late-varieties__maxus-image {
+                    width: 124px;
+                    height: 124px;
+                    border-radius: 62px;  
+                    margin: 13px 25px;
+                }
+                .middle-late-varieties__main-info {
+                    .middle-late-varieties__name {
+                        margin-top: 20px;
+                        margin-bottom: 7px;
+                    }
+                    .middle-late-varieties__info {
+                        margin-bottom: 12px;  
+                    }
+                }
+            }
+        }
+    }
+    .contacts {
+        &__phone-adress {
+            .contacts__phone {
+                width: 450px;
+            }
+            .contacts__adress {
+                width: 450px;
+            }
+        }
+        &__map {
+            width: 480px;
+            height: 330px;
+        }
+    }
+}
+@media(max-width: 1024px) {
+    .header {
+        height: 500px;
+    }
+    .header-opasity {
+        height: 500px;
+    }
+    .header-block {
+        &__name {
+            font-size: 48px;
+            line-height: 58px;
+        }
+        &__info { 
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+    .header-block__navigate {
+        top: 463px;
+        &_left {
+            width: 220px;
+            height: 81px;
+            text-align: center;
+        }
+        &_left a {
+            padding: 31px 23px;
+        }
+        &_center {
+            width: 220px;
+            height: 81px;
+            text-align: center;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+        &_center a {
+            padding: 21px 23px;
+        }
+        &_right {
+            width: 220px;
+            height: 81px;
+            text-align: center;
+        }
+        &_right a {
+            padding: 21px 26px;
+        }
+    }
+    .early-varieties {       
+        &__left-block {
+            .early-varieties__tabble {
+                width: 500px;
+            }
+            .early-varieties__image {
+                .early-varieties__image1 {
+                    top: 250px; 
+                }
+                .early-varieties__image2 {
+                    left: 320px;
+                }
+            }
+        }
+        &__right-block {
+            margin-left: 15px;
+            .early-varieties__type {        
+                width: 320px;
+                height: 140px;
+                margin-bottom: 15px;
+                .early-varieties__ultra-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }
+                .early-varieties__apollo-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }
+                .early-varieties__histar-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }
+                .early-varieties__ps0035nr2-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }
+                .early-varieties__s0009m2-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }
+                .early-varieties__main-info {
+                    .early-varieties__name {
+                        margin-top: 12px;
+                        margin-bottom: 7px;
+                    }
+                    .early-varieties__info {
+                        margin-bottom: 12px;  
+                    }
+                }
+            }
+        }
+    }
+    .middle-early-varieties {
+        &__left-block {
+            margin-right: 15px;
+            .middle-early-varieties__type {
+                width: 320px;
+                height: 140px;
+                .middle-early-varieties__monroe-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }
+                .middle-early-varieties__sensor-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }
+                .middle-early-varieties__hardin-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }
+                .middle-early-varieties__s04d3-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }              
+                .middle-early-varieties__main-info {
+                    .middle-early-varieties__name {
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+        &__right-block {
+            .middle-early-varieties__tabble {
+                width: 500px;
+            }
+            .middle-early-varieties__image {
+                .middle-early-varieties__image1 {
+                    top: 130px;
+                }
+                .middle-early-varieties__image2 {
+                    left: 330px;
+                }
+            }
+        }
+    }
+    .middle-late-varieties {
+        height: 520px;
+        &__left-block {
+            .middle-late-varieties__tabble {
+                width: 500px;
+            }
+            .middle-late-varieties__image {
+                .middle-late-varieties__image1 {
+                    top: 0px; 
+                }
+                .middle-late-varieties__image2 {
+                    left: 330px;
+                    top: 49px;
+                }
+            }
+        }
+        &__right-block {
+            margin-left: 15px;
+            .middle-late-varieties__type {
+                width: 320px;
+                height: 140px;
+                margin-bottom: 15px;
+                .middle-late-varieties__onyx-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }
+                .middle-late-varieties__maxus-image {
+                    width: 110px;
+                    height: 110px;
+                    border-radius: 55px;  
+                    margin: 14px 12px;
+                }
+                .middle-late-varieties__main-info {
+                    .middle-late-varieties__name {
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .contacts {  
+        &__phone-adress {
+            margin-right: 10px;
+            .contacts__phone {
+                width: 400px;
+                margin-bottom: 20px;
+                .contacts__phone-info {
+                    .contacts__phone-text {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .contacts__adress {
+                width: 400px;
+                .contacts__adress-info { 
+                    .contacts__adress-text {
+                        margin-bottom: 20px;
+                    }  
+                }
+            }           
+        }
+        &__map {
+            margin-left: 10px;
+            width: 400px;
+            height: 320px;
+        }
+    }
+}
+@media(max-width: 870px) {
+    .top-menu { 
+        font-size: 16px;
+        &__logo {
+            height: 45px;
+            width: 80px;      
+            margin-right: -10px;
+        }
+        &__list li a {   
+            padding: 20px 4px;
+        }
+    }
+    .header {   
+        height: 480px;
+    }
+    .header-opasity {
+        height: 480px;
+    }
+    .header-block {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        &__name {
+            width: 200px;
+            font-size: 30px;
+            line-height: 36px;
+            margin-top: 135px;
+            margin-bottom: 50px;
+        }
+        &__info {          
+            font-size: 18px;
+            line-height: 22px;           
+        }
+    }  
+    .header-block__navigate {
+        height: 100px;
+        top: 400px;
+        &_left {
+            width: 92px;
+            height: 52px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 14px;
+            border: 1px solid transparent;          
+        }
+        &_left a {
+            text-decoration: none;
+            width: 76%; 
+            color: #000000;
+            font-size: 13px;
+            padding: 13px 11px;
+        }
+        &_left a:hover {           
+            color: white;          
+        }
+        &_center {
+            width: 92px;
+            height: 52px;
+            text-align: center;
+            margin-left: 12px;
+            margin-right: 12px;
+            font-size: 12px;
+            line-height: 14px;
+            border: 1px solid transparent; 
+        }
+        &_center a {
+            text-decoration: none;
+            width: 76%; 
+            color: #000000;
+            font-size: 13px;
+            padding: 6px 12px;
+        }
+        &_center a:hover {
+            color: white;   
+        }
+        &_right {
+            width: 92px;
+            height: 52px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 14px;
+            border: 1px solid transparent; 
+        }
+        &_right a {
+            text-decoration: none;
+            width: 76%; 
+            color: #000000;
+            font-size: 13px;
+            padding: 6px 12px;
+        }
+        &_right a:hover {
+            color: white;   
+        }
+    }     
+    .early-varieties {
+        height: 1070px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column; 
+        margin-top: 0px;     
+        &__left-block {
+            margin-top: 20px;
+            .early-varieties__name  {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 20px;
+            }
+            .early-varieties__tabble {
+                width: 315px;
+            }
+            .early-varieties__image {
+                position: relative;
+                .early-varieties__image1 {
+                    width: 84%;
+                    top: 760px;
+                    left: 22px; 
+                }
+                .early-varieties__image2 {
+                    width: 27%;
+                    top: 740px;
+                    left: 228px;
+                }
+            }
+        }
+        &__right-block {
+            margin-top: 20px;
+            margin-left: 0px;
+            .early-varieties__type {
+                width: 315px;
+                height: 124px;
+                margin-bottom: 20px;
+                .early-varieties__ultra-image {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50px;
+                    margin: 12px 25px;
+                }
+                .early-varieties__apollo-image {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50px;
+                    margin: 12px 25px;
+                }
+                .early-varieties__histar-image {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50px;
+                    margin: 12px 25px;
+                }
+                .early-varieties__ps0035nr2-image {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50px;
+                    margin: 12px 25px;
+                }
+                .early-varieties__s0009m2-image {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50px;
+                    margin: 12px 25px;
+                }
+                .early-varieties__main-info {
+                    .early-varieties__name {
+                        font-size: 18px;
+                        line-height: 22px;
+                        margin-top: 12px;
+                        margin-bottom: 8px;
+                    }
+                    .early-varieties__info {
+                        font-size: 12px;
+                        line-height: 14px;
+                        margin-bottom: 10px;  
+                    }
+                    .early-varieties__download-info {
+                        width: 140px;                
+                    }
+                }
+            }
+        }
+    }
+    .middle-early-varieties {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        height: 930px;
+        &__left-block {
+            order: 2;
+            margin-right: 0px;
+            margin-top: 20px;
+            .middle-early-varieties__type {
+            width: 315px;
+            height: 124px;
+            margin-bottom: 20px;
+                .middle-early-varieties__monroe-image {
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                margin: 12px 25px;
+                }
+                .middle-early-varieties__sensor-image {
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                margin: 12px 25px;
+                }
+                .middle-early-varieties__hardin-image {
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                margin: 12px 25px;
+                }
+                .middle-early-varieties__s04d3-image {
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                margin: 12px 25px;
+                }              
+                .middle-early-varieties__main-info {
+                    .middle-early-varieties__name {
+                    font-size: 18px;
+                    line-height: 22px;
+                    margin-top: 12px;
+                    margin-bottom: 8px;
+                    }
+                    .middle-early-varieties__info {
+                    font-size: 12px;
+                    line-height: 14px;
+                    margin-bottom: 10px; 
+                    }
+                    .middle-early-varieties__download-info {
+                    width: 140px;
+                    }
+                }
+            }
+        }
+        &__right-block {
+            margin-top: 20px;
+            order: 1;
+            .middle-early-varieties__name {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 20px;
+            }
+            .middle-early-varieties__tabble {
+                width: 315px;
+            }
+            .middle-early-varieties__image {
+                .middle-early-varieties__image1 {
+                    top: 600px;
+                    left: 20px;
+                }
+                .middle-early-varieties__image2 {
+                    top: 600px;
+                    left: 210px;
+                }
+            }
+        }
+    }
+    .middle-late-varieties {
+        height: 630px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column; 
+        &__left-block {
+            margin-top: 20px;
+            .middle-late-varieties__name  {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 20px;
+            }
+            .middle-late-varieties__tabble {
+                width: 315px;
+            }
+            .middle-late-varieties__image {
+                .middle-late-varieties__image1 {
+                    top: 290px;
+                    left: 30px;
+                    width: 88%; 
+                }
+                .middle-late-varieties__image2 {
+                    left: 215px;
+                    top: 320px;
+                }
+            }
+        }
+        &__right-block {
+                margin-left: 0px;
+                margin-top: 20px;
+            .middle-late-varieties__type {
+                width: 315px;
+                height: 124px;
+                margin-bottom: 20px;
+                .middle-late-varieties__onyx-image {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50px;
+                    margin: 12px 25px;
+                }
+                .middle-late-varieties__maxus-image {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50px;
+                    margin: 12px 25px;
+                }
+                .middle-late-varieties__main-info {
+                    .middle-late-varieties__name {
+                        font-size: 18px;
+                        line-height: 22px;
+                        margin-top: 12px;
+                        margin-bottom: 8px;
+                    }
+                    .middle-late-varieties__info {
+                        font-size: 12px;
+                        line-height: 14px;
+                        margin-bottom: 10px;  
+                    }
+                    .middle-late-varieties__download-info {
+                        width: 140px;               
+                    }
+                }
+            }
+        }
+    }
+    .contacts {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 700px;
+        &__phone-adress {
+            margin-right: 0px;        
+            .contacts__phone {
+                justify-content: flex-start;
+                width: 310px;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                .contacts__phone-logo {
+                    margin-left: 25px;
+                    margin-right: 25px;
+                }
+                .contacts__phone-info {
+                    .contacts__phone-text {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .contacts__adress {
+                justify-content: center;
+                align-items: center;
+                width: 310px;
+                margin-bottom: 70px;
+                .contacts__adress-logo {
+                    margin-left: 25px;
+                    margin-right: 25px;
+                }
+                .contacts__adress-info {
+                    font-family: 'OpenSans-Regular';
+                    font-size: 14px;
+                    line-height: 17px;
+                    .contacts__adress-text {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        &__map {
+            margin-left: 0px;
+            width: 315px;
+            height: 230px;
+        }
+    }
+}
